@@ -1,2 +1,2 @@
-# video-player-segmentation
+# video-player
 Video Player With Annotation Segmentation
