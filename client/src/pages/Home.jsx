@@ -23,7 +23,7 @@ const Home = () => {
   
   useEffect(() => {
       const fetchVideos = async () => {
-        const res = await axios.get("/videos/random");
+        const res = await axios.get("https://video-player-backend-g2ot.onrender.com/api/videos/random");
         setVideos(res.data);
       }
       fetchVideos();
