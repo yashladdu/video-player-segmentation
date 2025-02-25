@@ -163,7 +163,7 @@ const Upload = ({ setOpen }) => {
 
   const handleUpload = async (e)=>{
     e.preventDefault();
-    const res = await axios.post("/videos", {...inputs, tags})
+    const res = await axios.post("https://video-player-backend-g2ot.onrender.com/api/videos", {...inputs, tags})
      res.status===200  && navigate(`/video/${res.data._id}`) 
   }
   
