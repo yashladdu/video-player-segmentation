@@ -59,8 +59,8 @@ const Video = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const videoRes = await axios.get(`/videos/find/${path}`);
-        const channelRes = await axios.get(`/users/find/${videoRes.data.userId}`);
+        const videoRes = await axios.get(`https://video-player-backend-g2ot.onrender.com/api/videos/find/${path}`);
+        const channelRes = await axios.get(`https://video-player-backend-g2ot.onrender.com/api/users/find/${videoRes.data.userId}`);
         setChannel(channelRes.data);
         dispatch(fetchSuccess(videoRes.data));
       } catch (err) {      
