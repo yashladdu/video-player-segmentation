@@ -47,7 +47,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://video-player-backend-g2ot.onrender.com",
+  "proxy": "https://video-player-backend-g2ot.onrender.com/api",
   "devDependencies": {
     "video.js": "^8.3.0"
   }
