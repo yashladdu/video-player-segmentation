@@ -79,7 +79,7 @@ const SignIn = () => {
     e.preventDefault();
     dispatch(loginStart());
     try {
-      const res = await axios.post("/auth/signin", {name, password});
+      const res = await axios.post("https://video-player-backend-g2ot.onrender.com/api/auth/signin", {name, password});
       dispatch(loginSuccess(res.data));
       navigate("/");
     } catch (err) {
@@ -90,7 +90,7 @@ const SignIn = () => {
   const handleSignIn = async () => {
     dispatch(loginStart())
     try {
-      const res = await axios.post("/auth/signup", {name, email, password});
+      const res = await axios.post("https://video-player-backend-g2ot.onrender.com/api/auth/signup", {name, email, password});
       dispatch(loginSuccess(res.data));
       navigate("/");
     } catch (err) {
@@ -102,7 +102,7 @@ const SignIn = () => {
     dispatch(loginStart())
     signInWithPopup(auth, provider)
     .then((result) => {
-      axios.post("/auth/google", {
+      axios.post("https://video-player-backend-g2ot.onrender.com/api/auth/google", {
         name:result.user.displayName,
         email:result.user.email,
         profilepic:result.user.photoURL
